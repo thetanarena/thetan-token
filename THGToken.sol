@@ -19,15 +19,15 @@ contract THGToken is ERC20, ERC20Burnable, ERC20Snapshot, Ownable, Pausable {
         _mint(owner(), totalTokens);  
     }
 
-    function snapshot() public onlyOwner {
+    function snapshot() external onlyOwner {
         _snapshot();
     }
 
-    function pause() public onlyOwner {
+    function pause() external onlyOwner {
         _pause();
     }
 
-    function unpause() public onlyOwner {
+    function unpause() external onlyOwner {
         _unpause();
     }
 
